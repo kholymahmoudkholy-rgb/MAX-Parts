@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800;900&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+a{color:#E20613;text-decoration:none}a:hover{color:#ff3341}
+</style>
+</helmet>
+
+<div style="max-width:1400px;width:100%;margin:0 auto;background:#0A0F1A;font-family:'Montserrat',system-ui,sans-serif;color:#EDEDED;padding-bottom:100px">
+
+  <!-- HEADER -->
+  <div style="height:96px;background:#E20613;display:flex;align-items:center;justify-content:space-between;padding:0 56px">
+    <img src="assets/logo-mark-white.png" style="height:46px;width:auto;object-fit:contain">
+    <div style="text-align:right">
+      <div style="font-family:'Saira',sans-serif;font-size:18px;font-weight:800;letter-spacing:2px;color:#fff">PACKAGING SPECIFICATION</div>
+      <div style="font-size:12.5px;font-weight:600;letter-spacing:2.5px;color:rgba(255,255,255,.82)">BEARINGS LINE · {{ part }} · RED MASTER</div>
+    </div>
+  </div>
+
+  <div style="padding:0 56px">
+
+    <!-- 01 HERO + SPEC -->
+    <div style="display:flex;flex-wrap:wrap;gap:40px;margin-top:44px">
+      <div style="flex:0 0 760px">
+        <div style="font-family:'Saira',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;color:#fff">01 — FRONT PANEL · PRINT-READY</div>
+        <div style="width:40px;height:2.5px;background:#E20613;margin:8px 0 16px"></div>
+        <div style="position:relative;width:760px;height:475px;overflow:hidden;outline:1px solid rgba(255,255,255,.1)">
+          <div style="width:960px;height:600px;transform:scale(0.79167);transform-origin:top left">
+            <dc-import name="MAX Box Face" kind="front" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import>
+          </div>
+        </div>
+      </div>
+
+      <div style="flex:1;padding-top:40px">
+        <div style="background:#0E1420;border:1px solid rgba(255,255,255,.08);padding:28px 30px">
+          <div style="font-family:'Saira',sans-serif;font-size:15px;font-weight:700;letter-spacing:2px;color:#fff">PRINT &amp; MATERIAL SPEC</div>
+          <div style="width:40px;height:2.5px;background:#E20613;margin:9px 0 20px"></div>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">CARTON STYLE</span><span style="font-size:13px;font-weight:600;color:#EDEDED">Straight Tuck End (STE)</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">FLAT SIZE</span><span style="font-size:13px;font-weight:600;color:#EDEDED">528 × 215 mm</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">FOLDED · L×D×H</span><span style="font-size:13px;font-weight:600;color:#EDEDED">200 × 55 × 125 mm</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">BOARD</span><span style="font-size:13px;font-weight:600;color:#EDEDED">350 gsm C1S folding boxboard</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">PRINT</span><span style="font-size:13px;font-weight:600;color:#EDEDED">2 colours — spot</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07)"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">FINISH</span><span style="font-size:13px;font-weight:600;color:#EDEDED">Matte lam + spot-UV logo</span></div>
+            <div style="display:flex;justify-content:space-between;padding:11px 0"><span style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0">BLEED / SAFETY</span><span style="font-size:13px;font-weight:600;color:#EDEDED">3 mm · 4 mm</span></div>
+          </div>
+          <div style="font-size:12px;font-weight:600;letter-spacing:1px;color:#8A93A0;margin:18px 0 12px">SPOT COLOURS</div>
+          <div style="display:flex;gap:34px">
+            <div style="display:flex;align-items:center;gap:12px"><span style="width:42px;height:42px;background:#E20613"></span><div><div style="font-size:12.5px;font-weight:700">MAX RED</div><div style="font-size:11px;color:#8A93A0">#E20613 · PANTONE 485 C</div></div></div>
+            <div style="display:flex;align-items:center;gap:12px"><span style="width:42px;height:42px;background:#0C1424;border:1px solid rgba(255,255,255,.15)"></span><div><div style="font-size:12.5px;font-weight:700">CARBON NAVY</div><div style="font-size:11px;color:#8A93A0">#0C1424 · PANTONE 5255 C</div></div></div>
+          </div>
+          <div style="font-size:11.5px;color:#6E7B8C;margin-top:18px;line-height:1.5;font-family:'Montserrat',sans-serif">Type: Saira (display) · Montserrat (text). Convert all copy to outlines before output. Product render placed at 300 dpi min.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 FLAT NET -->
+    <div style="margin-top:72px">
+      <div style="font-family:'Saira',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;color:#fff">02 — 2D DIELINE / NET · FACTORY CUTTING GUIDE</div>
+      <div style="width:40px;height:2.5px;background:#E20613;margin:8px 0 16px"></div>
+      <div style="display:flex;gap:26px;align-items:center;margin-bottom:22px;font-family:'Saira',sans-serif">
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:30px;height:2px;background:#E20613"></span><span style="font-size:12px;font-weight:600;color:#C7CED6">CUT LINE</span></div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:30px;height:0;border-top:2px dashed #7DE0FF"></span><span style="font-size:12px;font-weight:600;color:#C7CED6">CREASE / FOLD</span></div>
+        <div style="display:flex;align-items:center;gap:9px"><span style="width:20px;height:12px;background:rgba(226,6,19,.16);border:1px solid #E20613"></span><span style="font-size:12px;font-weight:600;color:#C7CED6">GLUE AREA</span></div>
+        <div style="margin-left:auto;font-size:12px;font-weight:600;letter-spacing:1.5px;color:#6E7B8C">NOT TO SCALE · MILLIMETRES</div>
+      </div>
+
+      <div style="width:100%;overflow-x:auto;padding-bottom:8px">
+      <div style="position:relative;width:1360px;height:590px;margin:0 auto">
+        <!-- faces on band -->
+        <div style="position:absolute;left:53.2px;top:132px;width:480px;height:300px;overflow:hidden">
+          <div style="width:960px;height:600px;transform:scale(0.5);transform-origin:top left"><dc-import name="MAX Box Face" kind="back" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import></div>
+        </div>
+        <div style="position:absolute;left:533.2px;top:132px;width:132px;height:300px;overflow:hidden">
+          <div style="width:264px;height:600px;transform:scale(0.5);transform-origin:top left"><dc-import name="MAX Box Face" kind="side" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="264px,600px" style="width:264px;height:600px"></dc-import></div>
+        </div>
+        <div style="position:absolute;left:665.2px;top:132px;width:480px;height:300px;overflow:hidden">
+          <div style="width:960px;height:600px;transform:scale(0.5);transform-origin:top left"><dc-import name="MAX Box Face" kind="front" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import></div>
+        </div>
+        <div style="position:absolute;left:1145.2px;top:132px;width:132px;height:300px;overflow:hidden">
+          <div style="width:264px;height:600px;transform:scale(0.5);transform-origin:top left"><dc-import name="MAX Box Face" kind="side" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="264px,600px" style="width:264px;height:600px"></dc-import></div>
+        </div>
+        <!-- overlay: cut / crease / glue / dims -->
+        <svg viewBox="-10 -24 1360 590" width="1360" height="590" style="position:absolute;left:0;top:0;pointer-events:none;overflow:visible">
+          <path d="M48.48,108 L48.48,24 Q48.48,0 72.48,0 L247.2,0 A36,36 0 0 0 319.2,0 L493.92,0 Q517.92,0 517.92,24 L517.92,108" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M528.48,108 L562.08,7.2 L616.32,7.2 L649.92,108" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M660.48,108 L660.48,24 Q660.48,0 684.48,0 L859.2,0 A36,36 0 0 0 931.2,0 L1105.92,0 Q1129.92,0 1129.92,24 L1129.92,108" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M1140.48,108 L1174.08,7.2 L1228.32,7.2 L1261.92,108" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M48.48,408 L48.48,492 Q48.48,516 72.48,516 L247.2,516 A36,36 0 0 1 319.2,516 L493.92,516 Q517.92,516 517.92,492 L517.92,408" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M528.48,408 L562.08,508.8 L616.32,508.8 L649.92,408" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M660.48,408 L660.48,492 Q660.48,516 684.48,516 L859.2,516 A36,36 0 0 1 931.2,516 L1105.92,516 Q1129.92,516 1129.92,492 L1129.92,408" stroke="#E20613" stroke-width="1.6" fill="none"></path><path d="M1140.48,408 L1174.08,508.8 L1228.32,508.8 L1261.92,408" stroke="#E20613" stroke-width="1.6" fill="none"></path><line x1="1267.2" y1="108" x2="1267.2" y2="408" stroke="#E20613" stroke-width="1.6" fill="none"></line><path d="M43.2,108 L33.6,108 L0,141.6 L0,374.4 L33.6,408 L43.2,408" fill="#E20613" fill-opacity="0.16" stroke="#E20613" stroke-width="1.6"></path><g stroke="#E20613" stroke-width="0.7" opacity="0.45"><line x1="4" y1="408" x2="43.2" y2="108"></line><line x1="8" y1="408" x2="43.2" y2="138"></line><line x1="12" y1="408" x2="43.2" y2="168"></line><line x1="16" y1="408" x2="43.2" y2="198"></line><line x1="20" y1="408" x2="43.2" y2="228"></line><line x1="24" y1="408" x2="43.2" y2="258"></line><line x1="28" y1="408" x2="43.2" y2="288"></line><line x1="32" y1="408" x2="43.2" y2="318"></line><line x1="36" y1="408" x2="43.2" y2="348"></line></g><text x="21.6" y="258" text-anchor="middle" font-family="Saira" font-size="13" font-weight="700" letter-spacing="2" fill="#E20613" transform="rotate(-90 21.6 258)">GLUE</text>
+          <line x1="43.2" y1="0" x2="43.2" y2="516" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line><line x1="523.2" y1="7.2" x2="523.2" y2="508.8" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line><line x1="655.2" y1="0" x2="655.2" y2="516" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line><line x1="1135.2" y1="7.2" x2="1135.2" y2="508.8" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line><line x1="43.2" y1="108" x2="1267.2" y2="108" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line><line x1="43.2" y1="408" x2="1267.2" y2="408" stroke="#7DE0FF" stroke-width="1.2" stroke-dasharray="9 6" fill="none"></line>
+          <line x1="43.2" y1="542" x2="523.2" y2="542" stroke="#8A93A0" stroke-width="1"></line><line x1="43.2" y1="538" x2="43.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><line x1="523.2" y1="538" x2="523.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><rect x="257.2" y="533" width="52" height="18" fill="#0A0F1A"></rect><text x="283.2" y="547" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">200</text>
+          <line x1="523.2" y1="542" x2="655.2" y2="542" stroke="#8A93A0" stroke-width="1"></line><line x1="523.2" y1="538" x2="523.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><line x1="655.2" y1="538" x2="655.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><rect x="563.2" y="533" width="52" height="18" fill="#0A0F1A"></rect><text x="589.2" y="547" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">55</text>
+          <line x1="655.2" y1="542" x2="1135.2" y2="542" stroke="#8A93A0" stroke-width="1"></line><line x1="655.2" y1="538" x2="655.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><line x1="1135.2" y1="538" x2="1135.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><rect x="869.2" y="533" width="52" height="18" fill="#0A0F1A"></rect><text x="895.2" y="547" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">200</text>
+          <line x1="1135.2" y1="542" x2="1267.2" y2="542" stroke="#8A93A0" stroke-width="1"></line><line x1="1135.2" y1="538" x2="1135.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><line x1="1267.2" y1="538" x2="1267.2" y2="546" stroke="#8A93A0" stroke-width="1"></line><rect x="1175.2" y="533" width="52" height="18" fill="#0A0F1A"></rect><text x="1201.2" y="547" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">55</text>
+          <line x1="1293.2" y1="108" x2="1293.2" y2="408" stroke="#8A93A0" stroke-width="1"></line><line x1="1289.2" y1="108" x2="1297.2" y2="108" stroke="#8A93A0" stroke-width="1"></line><line x1="1289.2" y1="408" x2="1297.2" y2="408" stroke="#8A93A0" stroke-width="1"></line><rect x="1271.2" y="249" width="44" height="18" fill="#0A0F1A"></rect><text x="1293.2" y="263" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">125</text>
+          <line x1="1293.2" y1="0" x2="1293.2" y2="108" stroke="#8A93A0" stroke-width="1"></line><line x1="1289.2" y1="0" x2="1297.2" y2="0" stroke="#8A93A0" stroke-width="1"></line><line x1="1289.2" y1="108" x2="1297.2" y2="108" stroke="#8A93A0" stroke-width="1"></line><rect x="1271.2" y="45" width="44" height="18" fill="#0A0F1A"></rect><text x="1293.2" y="59" text-anchor="middle" font-family="Saira" font-size="14" font-weight="600" fill="#C7CED6">45</text>
+          <text x="283.2" y="128" text-anchor="middle" font-family="Saira" font-size="13" font-weight="700" letter-spacing="3" fill="#fff" opacity="0.5">BACK</text><text x="895.2" y="128" text-anchor="middle" font-family="Saira" font-size="13" font-weight="700" letter-spacing="3" fill="#fff" opacity="0.5">FRONT</text><text x="895.2" y="-14" text-anchor="middle" font-family="Saira" font-size="12" font-weight="700" letter-spacing="2" fill="#6E7B8C">TUCK FLAP</text>
+        </svg>
+      </div>
+      </div>
+    </div>
+
+    <!-- 03 3D MOCKUP -->
+    <div style="margin-top:72px">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div>
+          <div style="font-family:'Saira',sans-serif;font-size:16px;font-weight:700;letter-spacing:2px;color:#fff">03 — 3D MOCKUP · LIVE PREVIEW</div>
+          <div style="width:40px;height:2.5px;background:#E20613;margin:8px 0 0"></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:16px">
+          <span style="font-size:12px;font-weight:600;letter-spacing:1.5px;color:#6E7B8C;font-family:'Saira',sans-serif">DRAG TO ROTATE — REFLECTS THE NET LIVE</span>
+          <button onClick="{{ reset }}" style="background:transparent;border:1px solid rgba(255,255,255,.2);color:#C7CED6;font-family:'Saira',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;padding:8px 14px;cursor:pointer">RESET VIEW</button>
+        </div>
+      </div>
+
+      <div onPointerDown="{{ down }}" onPointerMove="{{ move }}" onPointerUp="{{ up }}" onPointerLeave="{{ up }}" style="margin-top:24px;height:600px;background:radial-gradient(120% 90% at 50% 18%,#141c2b 0%,#0A0F1A 68%);border:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;perspective:1900px;cursor:grab;touch-action:none;user-select:none;overflow:hidden">
+        <div style="position:relative">
+          <div style="position:absolute;left:50%;top:230px;width:420px;height:70px;transform:translateX(-50%);background:radial-gradient(50% 50% at 50% 50%,rgba(0,0,0,.55),transparent 70%);filter:blur(6px)"></div>
+          <div style="position:relative;width:340px;height:212.5px;transform-style:preserve-3d;transform:{{ boxTransform }}">
+            <div style="position:absolute;left:50%;top:50%;width:340px;height:212.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) translateZ(46.75px)"><div style="width:960px;height:600px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="front" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import></div></div>
+            <div style="position:absolute;left:50%;top:50%;width:340px;height:212.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) rotateY(180deg) translateZ(46.75px)"><div style="width:960px;height:600px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="back" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import></div></div>
+            <div style="position:absolute;left:50%;top:50%;width:93.5px;height:212.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) rotateY(90deg) translateZ(170px)"><div style="width:264px;height:600px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="side" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="264px,600px" style="width:264px;height:600px"></dc-import></div></div>
+            <div style="position:absolute;left:50%;top:50%;width:93.5px;height:212.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) rotateY(-90deg) translateZ(170px)"><div style="width:264px;height:600px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="side" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="264px,600px" style="width:264px;height:600px"></dc-import></div></div>
+            <div style="position:absolute;left:50%;top:50%;width:340px;height:93.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) rotateX(90deg) translateZ(106.25px)"><div style="width:960px;height:264px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="top" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,264px" style="width:960px;height:264px"></dc-import></div></div>
+            <div style="position:absolute;left:50%;top:50%;width:340px;height:93.5px;overflow:hidden;backface-visibility:hidden;transform:translate(-50%,-50%) rotateX(-90deg) translateZ(106.25px)"><div style="width:960px;height:264px;transform:scale(0.354167);transform-origin:top left"><dc-import name="MAX Box Face" kind="bottom" color="{{ color }}" line="{{ line }}" product="{{ product }}" part="{{ part }}" tagline="{{ tagline }}" icon="{{ icon }}" hint-size="960px,264px" style="width:960px;height:264px"></dc-import></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;line&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;BEARINGS&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Box content&quot;},&quot;product&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;WHEEL HUB BEARING&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Box content&quot;},&quot;part&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;MAX-1450&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Box content&quot;},&quot;tagline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;SMOOTH ROTATION. LONGER LIFE.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Box content&quot;},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E20613&quot;,&quot;options&quot;:[&quot;#E20613&quot;,&quot;#0C1424&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Box content&quot;}}">
+class Component extends DCLogic {
+  state = { rx: -18, ry: -30, drag: false, lx: 0, ly: 0, scale: 1, hostH: '3200px' };
+  componentDidMount() { this._fit = this.fit.bind(this); [60, 400, 1200, 2400].forEach(t => setTimeout(this._fit, t)); window.addEventListener('resize', this._fit); }
+  componentWillUnmount() { window.removeEventListener('resize', this._fit); if (this._ro) this._ro.disconnect(); }
+  setHost(el) { this.host = el; }
+  setBoard(el) { this.board = el; if (el && !this._ro && window.ResizeObserver) { this._ro = new ResizeObserver(() => this.fit()); this._ro.observe(el); } }
+  fit() { const board = document.getElementById('pkg-board'); if (!board) return; const w = window.innerWidth || document.documentElement.clientWidth; const scale = Math.min(1, w / 1440); const h = board.scrollHeight; this.setState({ scale, hostH: (Math.round(h * scale)) + 'px' }); }
+  down(e) { this.setState({ drag: true, lx: e.clientX, ly: e.clientY }); try { e.currentTarget.setPointerCapture(e.pointerId); } catch (_) {} }
+  move(e) {
+    if (!this.state.drag) return;
+    const dx = e.clientX - this.state.lx, dy = e.clientY - this.state.ly;
+    this.setState(s => ({ ry: s.ry + dx * 0.45, rx: Math.max(-82, Math.min(82, s.rx - dy * 0.45)), lx: e.clientX, ly: e.clientY }));
+  }
+  up() { if (this.state.drag) this.setState({ drag: false }); }
+  reset() { this.setState({ rx: -16, ry: -28 }); }
+  renderVals() {
+    const p = this.props;
+    return {
+      color: p.color || '#E20613',
+      line: p.line || 'BEARINGS',
+      product: p.product || 'WHEEL HUB BEARING',
+      part: p.part || 'MAX-1450',
+      tagline: p.tagline || 'SMOOTH ROTATION. LONGER LIFE.',
+      icon: 'assets/il-wheelhub-hd.png',
+      boxTransform: `rotateX(${this.state.rx}deg) rotateY(${this.state.ry}deg)`,
+      down: this.down.bind(this), move: this.move.bind(this), up: this.up.bind(this), reset: this.reset.bind(this),
+      scale: this.state.scale, hostH: this.state.hostH, setHost: this.setHost.bind(this), setBoard: this.setBoard.bind(this),
+    };
+  }
+}
+</script>
+</body>
+</html>

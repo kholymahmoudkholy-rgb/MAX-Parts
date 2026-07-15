@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800;900&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0A0F1A;color:#EDEDED;font-family:'Montserrat',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#E20613;text-decoration:none}
+a:hover{color:#ff3341}
+</style>
+</helmet>
+
+<div style="min-height:100vh;padding:56px clamp(20px,5vw,72px) 88px">
+  <div style="max-width:1240px;margin:0 auto">
+
+    <!-- header -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px">
+      <span style="width:34px;height:2px;background:#E20613;display:block"></span>
+      <span style="font-family:'Saira',sans-serif;font-weight:600;font-size:13px;letter-spacing:.24em;text-transform:uppercase;color:#E20613">Packaging System</span>
+    </div>
+    <h1 style="margin:0;max-width:820px;font-family:'Saira',sans-serif;font-weight:800;text-transform:uppercase;font-size:clamp(32px,4.6vw,58px);line-height:.98;letter-spacing:-.01em;color:#fff">One front-panel template.<br>Seven color-coded lines.</h1>
+    <p style="margin:20px 0 0;max-width:600px;font-size:15.5px;line-height:1.65;color:#A6A6A6">A single shelf-ready layout scales across the whole MAX range — the category color, product name, tagline, part number and barcode swap per line, everything else stays fixed. Drop a product shot into the panel below, or switch lines from the Tweaks panel.</p>
+
+    <!-- active / hero panel -->
+    <div style="margin-top:44px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px;margin-bottom:18px">
+        <span style="font-family:'Saira',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#fff">Front Panel</span>
+        <span style="font-family:'Saira',sans-serif;font-weight:500;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:#6E7B8C">960 × 600 · editable template</span>
+      </div>
+      <div style="width:100%;overflow-x:auto">
+        <div style="width:960px;height:600px;box-shadow:0 40px 80px rgba(0,0,0,.5);outline:1px solid rgba(255,255,255,.08)">
+          <dc-import name="MAX Package Panel" color="{{ activeColor }}" line-name="{{ activeName }}" product-name="{{ activeProduct }}" part-no="{{ activePart }}" tagline="{{ activeTagline }}" slot-id="pkg-active-shot" hint-size="960px,600px" style="width:960px;height:600px"></dc-import>
+        </div>
+      </div>
+    </div>
+
+    <!-- family -->
+    <sc-if value="{{ showFamily }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-top:72px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
+        <span style="font-family:'Saira',sans-serif;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#fff">The full family</span>
+      </div>
+      <p style="margin:0 0 26px;max-width:560px;font-size:14px;line-height:1.6;color:#8A93A0">Same grid, same type, same badges — only the category color and copy change.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+        <sc-for list="{{ families }}" as="ln" hint-placeholder-count="7">
+          <div>
+            <div style="position:relative;width:100%;padding-top:62.5%;overflow:hidden;background:#0C1424;outline:1px solid rgba(255,255,255,.07)">
+              <div style="position:absolute;top:0;left:0;width:960px;height:600px;transform:scale(0.3125);transform-origin:top left">
+                <dc-import name="MAX Package Panel" color="{{ ln.color }}" line-name="{{ ln.name }}" product-name="{{ ln.product }}" part-no="{{ ln.part }}" tagline="{{ ln.tagline }}" product-img="{{ ln.img }}" slot-id="{{ ln.key }}" hint-size="960px,600px" style="width:960px;height:600px"></dc-import>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;margin-top:12px">
+              <span style="width:12px;height:12px;flex-shrink:0;background:{{ ln.color }}"></span>
+              <span style="font-family:'Saira',sans-serif;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#fff">{{ ln.name }}</span>
+              <span style="font-family:'Saira',sans-serif;font-weight:500;font-size:12px;letter-spacing:.12em;color:#6E7B8C;margin-left:auto">{{ ln.part }}</span>
+            </div>
+            <div style="margin-top:3px;font-size:12.5px;color:#8A93A0">{{ ln.product }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;line&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;suspension&quot;,&quot;steering&quot;,&quot;bearings&quot;,&quot;rubber&quot;,&quot;mounts&quot;,&quot;brake&quot;,&quot;drivetrain&quot;],&quot;default&quot;:&quot;suspension&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Front panel&quot;},&quot;showFamily&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Front panel&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const LINES = [
+      { key: 'suspension', name: 'Suspension',   color: '#E20613', product: 'Shock Absorber',     part: 'MAX-1201', tagline: 'Superior control. Smoother ride.',  img: 'assets/il-shock.png' },
+      { key: 'steering',   name: 'Steering',      color: '#E8730F', product: 'Tie Rod End',        part: 'MAX-1330', tagline: 'Precise steering. True response.', img: 'assets/il-tierod.png' },
+      { key: 'bearings',   name: 'Bearings',      color: '#1E5FA6', product: 'Wheel Hub Bearing',  part: 'MAX-1450', tagline: 'Smooth rotation. Longer life.',    img: 'assets/il-wheelhub.png' },
+      { key: 'rubber',     name: 'Rubber Parts',  color: '#3C8A3C', product: 'Control Arm Bushing',part: 'MAX-1560', tagline: 'Quiet ride. Solid control.',       img: 'assets/il-bushing.png' },
+      { key: 'mounts',     name: 'Engine Mounts', color: '#6E6E6E', product: 'Engine Mount',       part: 'MAX-1670', tagline: 'Less vibration. More stability.',  img: 'assets/il-strutmount.png' },
+      { key: 'brake',      name: 'Brake Parts',   color: '#C8951A', product: 'Brake Caliper',      part: 'MAX-1780', tagline: 'Confident, consistent stopping.',  img: 'assets/il-rackend.png' },
+      { key: 'drivetrain', name: 'Drive Train',   color: '#7B4EA0', product: 'CV Joint',           part: 'MAX-1890', tagline: 'Power delivered. Mile after mile.', img: 'assets/il-balljoint.png' },
+    ];
+    const key = this.props.line || 'suspension';
+    const active = LINES.find(l => l.key === key) || LINES[0];
+    return {
+      activeColor: active.color,
+      activeName: active.name,
+      activeProduct: active.product,
+      activePart: active.part,
+      activeTagline: active.tagline,
+      families: LINES,
+      showFamily: this.props.showFamily ?? true,
+    };
+  }
+}
+</script>
+</body>
+</html>

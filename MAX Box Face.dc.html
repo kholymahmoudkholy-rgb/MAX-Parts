@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800;900&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+</helmet>
+
+<!-- FRONT · 600×600 (150×150mm) -->
+<sc-if value="{{ isFront }}" hint-placeholder-val="{{ true }}">
+<div style="position:relative;width:600px;height:600px;background:#0C1424;overflow:hidden;font-family:'Saira',sans-serif">
+  <div style="position:absolute;inset:0;background:{{ color }};clip-path:polygon(64% 0,100% 0,100% 100%,50% 100%)"></div>
+  <div style="position:absolute;inset:0;background:#000;opacity:.18;clip-path:polygon(72% 0,76% 0,58% 100%,54% 100%)"></div>
+  <div style="position:absolute;left:0;top:0;width:5px;height:100%;background:{{ color }}"></div>
+  <div style="position:absolute;left:34px;top:32px;height:28px;display:flex;align-items:center;padding:0 13px;background:{{ color }};color:#fff;font-weight:700;font-size:12px;letter-spacing:2px">{{ line }}</div>
+  <div style="position:absolute;right:30px;top:37px;white-space:nowrap;font-size:11.5px;font-weight:500;letter-spacing:2.2px;color:rgba(255,255,255,.55)">{{ part }}</div>
+  <div style="position:absolute;left:34px;top:74px;max-width:330px;font-size:40px;font-weight:800;line-height:.97;letter-spacing:-.5px;color:#fff">{{ product }}</div>
+  <div style="position:absolute;left:36px;top:188px;width:30px;height:2px;background:{{ color }}"></div>
+  <div style="position:absolute;left:78px;top:181px;font-size:12.5px;font-weight:600;letter-spacing:1.2px;color:{{ color }}">{{ tagline }}</div>
+  <img src="{{ icon }}" style="position:absolute;left:56px;top:214px;width:290px;height:286px;object-fit:contain">
+  <img src="assets/logo-mark-white.png" style="position:absolute;left:398px;top:150px;width:174px;height:66px;object-fit:contain">
+  <div style="position:absolute;left:34px;top:516px;display:flex;gap:14px">
+    <div style="width:76px;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:50px;height:50px;border-radius:50%;border:1.2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center"><img src="assets/ic-oe.png" style="width:24px;height:24px;object-fit:contain"></div><div style="font-size:9px;font-weight:600;letter-spacing:.7px;color:#B9C2CF">OE QUALITY</div></div>
+    <div style="width:76px;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:50px;height:50px;border-radius:50%;border:1.2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center"><img src="assets/ic-longlife.png" style="width:24px;height:24px;object-fit:contain"></div><div style="font-size:9px;font-weight:600;letter-spacing:.7px;color:#B9C2CF">LONG LIFE</div></div>
+    <div style="width:76px;display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:50px;height:50px;border-radius:50%;border:1.2px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center"><img src="assets/ic-safety.png" style="width:24px;height:24px;object-fit:contain"></div><div style="font-size:9px;font-weight:600;letter-spacing:.7px;color:#B9C2CF">SAFETY</div></div>
+  </div>
+  <div style="position:absolute;left:398px;top:486px;width:190px;height:66px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+    <div style="position:relative;width:176px;height:40px">
+      <sc-for list="{{ bars }}" as="b" hint-placeholder-count="26"><div style="position:absolute;top:0;left:{{ b.xpx }};width:{{ b.wpx }};height:100%;background:#0C1424"></div></sc-for>
+    </div>
+    <div style="font-size:9.5px;font-weight:600;letter-spacing:2.4px;color:#0C1424">{{ part }}</div>
+  </div>
+  <div style="position:absolute;left:398px;top:558px;width:190px;text-align:center;font-size:8.5px;font-weight:500;letter-spacing:1px;color:rgba(255,255,255,.72)">MEETS OR EXCEEDS OEM SPEC</div>
+</div>
+</sc-if>
+
+<!-- BACK · 600×600 -->
+<sc-if value="{{ isBack }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;width:600px;height:600px;background:#0C1424;overflow:hidden;font-family:'Saira',sans-serif">
+  <div style="position:absolute;inset:0;background:{{ color }};clip-path:polygon(0 0,33% 0,19% 100%,0 100%)"></div>
+  <div style="position:absolute;right:0;top:0;width:5px;height:100%;background:{{ color }}"></div>
+  <img src="assets/logo-mark-white.png" style="position:absolute;left:222px;top:54px;width:210px;height:66px;object-fit:contain;object-position:left">
+  <div style="position:absolute;left:222px;top:172px;font-size:14px;font-weight:700;letter-spacing:1.5px;color:#fff">FEATURES</div>
+  <div style="position:absolute;left:222px;top:196px;width:32px;height:2px;background:{{ color }}"></div>
+  <div style="position:absolute;left:222px;top:212px;display:flex;flex-direction:column;gap:15px;font-family:'Montserrat',sans-serif">
+    <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:#C7CED6"><span style="width:6px;height:6px;border-radius:50%;background:{{ color }}"></span>OE-matched fit &amp; performance</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:#C7CED6"><span style="width:6px;height:6px;border-radius:50%;background:{{ color }}"></span>Sealed, pre-greased for life</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:#C7CED6"><span style="width:6px;height:6px;border-radius:50%;background:{{ color }}"></span>Integrated ABS tone ring</div>
+    <div style="display:flex;align-items:center;gap:12px;font-size:12px;color:#C7CED6"><span style="width:6px;height:6px;border-radius:50%;background:{{ color }}"></span>100% quality inspected</div>
+  </div>
+  <div style="position:absolute;left:222px;top:372px;font-size:11px;font-weight:600;letter-spacing:1.4px;color:#8A93A0">APPLICATION</div>
+  <div style="position:absolute;left:222px;top:392px;font-size:11px;color:#C7CED6;font-family:'Montserrat',sans-serif">Scan QR / part no. to verify vehicle fit.</div>
+  <div style="position:absolute;left:222px;top:428px;width:56px;height:56px;background:#fff;display:flex;align-items:center;justify-content:center"><div style="width:40px;height:40px;background:#0C1424;display:flex;align-items:center;justify-content:center"><div style="width:26px;height:26px;background:#fff;display:flex;align-items:center;justify-content:center"><div style="width:11px;height:11px;background:#0C1424"></div></div></div></div>
+  <div style="position:absolute;left:300px;top:428px;width:190px;height:66px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px">
+    <div style="position:relative;width:176px;height:38px"><sc-for list="{{ bars }}" as="b" hint-placeholder-count="26"><div style="position:absolute;top:0;left:{{ b.xpx }};width:{{ b.wpx }};height:100%;background:#0C1424"></div></sc-for></div>
+    <div style="font-size:9.5px;font-weight:600;letter-spacing:2.2px;color:#0C1424">6 123456 789012</div>
+  </div>
+  <div style="position:absolute;left:222px;top:552px;font-size:9.5px;font-weight:500;letter-spacing:1.4px;color:#6E7B8C">www.maxautoparts.com</div>
+  <div style="position:absolute;right:34px;top:552px;font-size:9.5px;font-weight:600;letter-spacing:1.4px;color:#6E7B8C">MADE IN PRC</div>
+</div>
+</sc-if>
+
+<!-- SIDE · 360×600 (90×150mm) -->
+<sc-if value="{{ isSide }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;width:360px;height:600px;background:#0C1424;overflow:hidden;font-family:'Saira',sans-serif">
+  <div style="position:absolute;left:0;top:0;width:100%;height:60px;background:{{ color }}"></div>
+  <div style="position:absolute;left:0;bottom:0;width:100%;height:60px;background:{{ color }}"></div>
+  <img src="assets/logo-mark-white.png" style="position:absolute;left:50%;top:20px;transform:translateX(-50%);width:150px;height:22px;object-fit:contain">
+  <div style="position:absolute;left:47%;top:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;font-size:26px;font-weight:800;letter-spacing:1px;color:#fff">{{ product }}</div>
+  <div style="position:absolute;left:calc(47% + 22px);top:50%;transform:translate(-50%,-50%) rotate(-90deg);white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:2px;color:{{ color }}">{{ part }}</div>
+  <div style="position:absolute;left:50%;bottom:20px;transform:translateX(-50%);white-space:nowrap;font-size:11px;font-weight:700;letter-spacing:2px;color:#fff">{{ line }}</div>
+</div>
+</sc-if>
+
+<!-- TOP · 600×360 (150×90mm) -->
+<sc-if value="{{ isTop }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;width:600px;height:360px;background:#0C1424;overflow:hidden;font-family:'Saira',sans-serif">
+  <div style="position:absolute;inset:0;background:{{ color }};clip-path:polygon(74% 0,100% 0,100% 100%,64% 100%)"></div>
+  <div style="position:absolute;inset:0;background:#000;opacity:.15;clip-path:polygon(82% 0,86% 0,72% 100%,68% 100%)"></div>
+  <div style="position:absolute;left:0;top:0;width:5px;height:100%;background:{{ color }}"></div>
+  <img src="assets/logo-mark-white.png" style="position:absolute;left:40px;top:144px;width:190px;height:62px;object-fit:contain;object-position:left">
+  <div style="position:absolute;left:262px;top:130px;max-width:230px;font-size:34px;font-weight:800;line-height:.95;letter-spacing:-.5px;color:#fff">{{ product }}</div>
+  <div style="position:absolute;right:44px;top:168px;font-size:13px;font-weight:600;letter-spacing:2px;color:#fff">{{ part }}</div>
+</div>
+</sc-if>
+
+<!-- BOTTOM · 600×360 -->
+<sc-if value="{{ isBottom }}" hint-placeholder-val="{{ false }}">
+<div style="position:relative;width:600px;height:360px;background:#0C1424;overflow:hidden;font-family:'Saira',sans-serif">
+  <div style="position:absolute;left:0;top:0;width:5px;height:100%;background:{{ color }}"></div>
+  <div style="position:absolute;left:50%;top:96px;transform:translateX(-50%);width:200px;height:100px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px">
+    <div style="position:relative;width:176px;height:56px"><sc-for list="{{ bars }}" as="b" hint-placeholder-count="26"><div style="position:absolute;top:0;left:{{ b.xpx }};width:{{ b.wpx }};height:100%;background:#0C1424"></div></sc-for></div>
+    <div style="font-size:11px;font-weight:600;letter-spacing:2.4px;color:#0C1424">{{ part }}</div>
+  </div>
+  <div style="position:absolute;left:40px;top:250px;font-size:12px;font-weight:600;letter-spacing:1.4px;color:#8A93A0">{{ product }}</div>
+  <div style="position:absolute;right:40px;top:250px;font-size:12px;font-weight:600;letter-spacing:1.4px;color:#8A93A0">MADE IN PRC</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:420},&quot;kind&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;front&quot;,&quot;back&quot;,&quot;side&quot;,&quot;top&quot;,&quot;bottom&quot;],&quot;default&quot;:&quot;front&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;color&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E20613&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;line&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;BEARINGS&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;product&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;WHEEL HUB BEARING&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;part&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;MAX-1450&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;tagline&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;SMOOTH ROTATION. LONGER LIFE.&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;icon&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;assets/il-wheelhub-hd.png&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const p = this.props;
+    const part = p.part || 'MAX-1450';
+    let h = 2166136261 >>> 0;
+    for (const c of part) { h ^= c.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
+    const bars = []; let x = 0, i = 0;
+    while (x < 176) { h = (Math.imul(h, 1103515245) + 12345) >>> 0; const w = 1 + (h % 4); if (i % 2 === 0) bars.push({ xpx: x + 'px', wpx: w + 'px' }); x += w; i++; }
+    const kind = p.kind || 'front';
+    return {
+      color: p.color || '#E20613',
+      line: p.line || 'BEARINGS',
+      product: p.product || 'WHEEL HUB BEARING',
+      part,
+      tagline: p.tagline || 'SMOOTH ROTATION. LONGER LIFE.',
+      icon: p.icon || 'assets/il-wheelhub-hd.png',
+      bars,
+      isFront: kind === 'front', isBack: kind === 'back', isSide: kind === 'side', isTop: kind === 'top', isBottom: kind === 'bottom',
+    };
+  }
+}
+</script>
+</body>
+</html>
